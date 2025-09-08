@@ -1,0 +1,152 @@
+/* Movies.css */
+.movies-page {
+  padding: 40px 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.page-header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.page-header h1 {
+  font-size: 3rem;
+  color: white;
+  margin-bottom: 10px;
+}
+
+.page-header p {
+  font-size: 1.2rem;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.filter-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-bottom: 40px;
+  flex-wrap: wrap;
+}
+
+.filter-buttons button {
+  padding: 12px 24px;
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  background: rgba(255, 255, 255, 0.1);
+  color: white;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  backdrop-filter: blur(10px);
+}
+
+.filter-buttons button:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.filter-buttons button.active {
+  background: var(--primary);
+  border-color: var(--primary);
+}
+
+.movies-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+}
+
+.movie-card {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 25px;
+  border-radius: 15px;
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  transition: transform 0.3s ease;
+}
+
+.movie-card:hover {
+  transform: translateY(-5px);
+}
+
+.movie-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 15px;
+}
+
+.movie-header h3 {
+  color: white;
+  font-size: 1.4rem;
+  margin: 0;
+}
+
+.rating {
+  background: rgba(255, 255, 255, 0.2);
+  padding: 5px 12px;
+  border-radius: 15px;
+  color: white;
+  font-weight: 600;
+}
+
+.movie-genre {
+  color: var(--accent);
+  font-weight: 600;
+  margin-bottom: 15px;
+  font-size: 1.1rem;
+}
+
+.showtimes {
+  margin-bottom: 20px;
+}
+
+.showtimes strong {
+  color: white;
+  display: block;
+  margin-bottom: 10px;
+}
+
+.time-slots {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.time-slot {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 8px 16px;
+  border-radius: 15px;
+  color: white;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.book-btn {
+  width: 100%;
+  padding: 12px;
+  background: var(--primary);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: background 0.3s ease;
+}
+
+.book-btn:hover {
+  background: #5a6fd8;
+}
+
+@media (max-width: 768px) {
+  .movies-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .filter-buttons {
+    gap: 10px;
+  }
+  
+  .filter-buttons button {
+    padding: 10px 20px;
+    font-size: 14px;
+  }
+}
